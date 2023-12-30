@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Rudraksh",
+    "location": {
+      "latitude": 23.634501,
+      "longitude": 23.634501
+    },
+    "address": "Bareilly",
+    "blocks": [
+      {
+        "name": "A",
+        "created": 1703580243283,
+        "types": [],
+        "total_units": 4,
+        "total_bought": 2,
+        "total_completed": 3,
+        "units": [
+          {
+            "unitType": "COMMERCIAL",
+            "unitArea": {
+              "plotArea": 100,
+              "constructedArea": 50,
+              "covered": 70
+            },
+            "unitDimension": {
+              "front": 150.0,
+              "depth": 100.0
+            },
+            "unitDirection": {
+              "east": "house2",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "unitNo": "25A",
+            "roadSize": {
+              "front": 30.0,
+              "corner": 40.0
+            },
+            "plcRoad": {
+              "corner": 50,
+              "park": null,
+              "floor": null,
+              "other": null
+            },
+            "extraPlotArea": 0.0,
+            "notes": []
+          },
+          {
+            "unitType": "PLOT",
+            "unitArea": {
+              "plotArea": 120,
+              "constructedArea": 60,
+              "covered": 80
+            },
+            "unitDimension": {
+              "front": 160.0,
+              "depth": 110.0
+            },
+            "unitDirection": {
+              "east": "house3",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "unitNo": "25B",
+            "roadSize": {
+              "front": 35.0,
+              "corner": 45.0
+            },
+            "plcRoad": {
+              "corner": 55,
+              "park": null,
+              "floor": null,
+              "other": null
+            },
+            "extraPlotArea": 0.0,
+            "notes": []
+          },
+          {
+            "unitType": "FLAT",
+            "unitArea": {
+              "plotArea": 140,
+              "constructedArea": 70,
+              "covered": 90
+            },
+            "unitDimension": {
+              "front": 170.0,
+              "depth": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "unitNo": "25C",
+            "roadSize": {
+              "front": 40.0,
+              "corner": 50.0
+            },
+            "plcRoad": {
+              "corner": 60,
+              "park": null,
+              "floor": null,
+              "other": null
+            },
+            "extraPlotArea": 0.0,
+            "notes": []
+          },
+          {
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 160,
+              "constructedArea": 80,
+              "covered": 100
+            },
+            "unitDimension": {
+              "front": 180.0,
+              "depth": 130.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "unitNo": "25D",
+            "roadSize": {
+              "front": 45.0,
+              "corner": 55.0
+            },
+            "plcRoad": {
+              "corner": 65,
+              "park": null,
+              "floor": null,
+              "other": null
+            },
+            "extraPlotArea": 0.0,
+            "notes": []
+          }
+        ]
+      }
+    ]
+  }
+]
