@@ -7,7 +7,14 @@ import 'package:dart_app/models/projects/blocks/categories.dart';
 import 'package:dart_app/models/projects/blocks/plc.dart';
 import 'package:dart_app/models/unit/unit.dart';
 
+class BlockStage {
+  static const String NOT_STARTED = 'NOT_STARTED';
+  static const String ONGOING = 'ONGOING';
+  static const String COMPLETED = 'COMPLETED';
+}
+
 class Blocks {
+  String blockStage;
   String name;
   DateTime created;
   List<String> types;
@@ -17,6 +24,7 @@ class Blocks {
   Map<String, bool> plc;
   List<Unit> units;
   Blocks({
+    required this.blockStage,
     required this.name,
     required this.created,
     required this.types,
@@ -28,6 +36,7 @@ class Blocks {
   });
 
   Blocks copyWith({
+    String? blockStage,
     String? name,
     DateTime? created,
     List<String>? types,
@@ -38,6 +47,7 @@ class Blocks {
     List<Unit>? units,
   }) {
     return Blocks(
+      blockStage: blockStage ?? this.blockStage,
       name: name ?? this.name,
       created: created ?? this.created,
       types: types ?? this.types,
@@ -51,8 +61,9 @@ class Blocks {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
+      'blockStage': blockStage,
       'name': name,
-      'created': created.toIso8601String(),
+      'created': created.millisecondsSinceEpoch,
       'types': types,
       'stages': stages,
       'tags': tags,
@@ -64,8 +75,9 @@ class Blocks {
 
   factory Blocks.fromMap(Map<String, dynamic> map) {
     return Blocks(
+      blockStage: map['blockStage'] as String,
       name: map['name'] as String,
-      created: DateTime.parse(map['created'] as String),
+      created: DateTime.fromMillisecondsSinceEpoch(map['created'] as int),
       types: List<String>.from(
         (map['types'] as List<String>),
       ),
@@ -98,7 +110,7 @@ class Blocks {
 
   @override
   String toString() {
-    return 'Blocks(name: $name, created: $created, types: $types, stages: $stages, tags: $tags, categories: $categories, plc: $plc, units: $units)';
+    return 'Blocks(blockStage: $blockStage, name: $name, created: $created, types: $types, stages: $stages, tags: $tags, categories: $categories, plc: $plc, units: $units)';
   }
 
   @override
@@ -106,7 +118,8 @@ class Blocks {
     if (identical(this, other)) return true;
     final collectionEquals = const DeepCollectionEquality().equals;
 
-    return other.name == name &&
+    return other.blockStage == blockStage &&
+        other.name == name &&
         other.created == created &&
         collectionEquals(other.types, types) &&
         collectionEquals(other.stages, stages) &&
@@ -118,7 +131,8 @@ class Blocks {
 
   @override
   int get hashCode {
-    return name.hashCode ^
+    return blockStage.hashCode ^
+        name.hashCode ^
         created.hashCode ^
         types.hashCode ^
         stages.hashCode ^

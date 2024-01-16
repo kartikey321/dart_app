@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:dart_app/configurations.dart';
 import 'package:dart_app/data/data.dart';
@@ -62,6 +63,28 @@ addData() async {
       var blockRef = projRef.collection('blocks').document(block.name);
       await blockRef.set(blockMap).catchError((error) => print(error));
 
+      await addCache(blockRef, block.name);
+
+      for (var plan in paymentPlans) {
+        var planMap = plan.toMap();
+
+        var payPlanRef = await blockRef
+            .collection('Standard Payment Plans')
+            .document(plan.name)
+            .set(planMap);
+      }
+
+      for (var priceBreakup in priceBreakups) {
+        var princingRef = blockRef
+            .collection('Pricing')
+            .document(priceBreakup.updatedOn.toIso8601String())
+            .collection('Types')
+            .document(priceBreakup.unitCategory);
+        var breakupMap = priceBreakup.toMap();
+
+        await princingRef.set(breakupMap);
+      }
+
       for (var sale in sales) {
         sale.nominees;
         var saleMap = sale.toMap();
@@ -74,6 +97,26 @@ addData() async {
             .set(saleMap)
             .whenComplete(() => print('donezFrom'))
             .onError((error, stackTrace) => print(error));
+
+        for (var interest in interests) {
+          await saleRef
+              .collection('Interests')
+              .document(DateTime.now().toIso8601String())
+              .set(interest.toMap());
+        }
+
+        for (var invoice in invoices) {
+          await saleRef
+              .collection('Invoices')
+              .document(invoice.recieptNo)
+              .set(invoice.toMap());
+        }
+        for (var demand in demands) {
+          await saleRef
+              .collection('Demands')
+              .document(demand.createdOn.toIso8601String())
+              .set(demand.toMap());
+        }
         if (sale.history != null) {
           for (var history in sale.history!) {
             await saleRef
@@ -133,6 +176,15 @@ addPaymentPlans() async {
   }
 }
 
+addCache(DocumentReference ref, String blockName) async {
+  Random rand = Random();
+  var availableOptions = ['Booked', 'Hold', 'Available', 'Other'];
+  Map<String, dynamic> docs = {};
+  for (int i = 1; i <= 100; i++) {
+    docs.addAll({'': ''});
+  }
+}
+
 addPricing() async {
   var ref = await initApp();
   for (var priceBreakup in priceBreakups) {
@@ -162,16 +214,16 @@ getData() async {
 void main() async {
   var apiKey = Configurations.firebaseConfig['apiKey'];
 
-  // print('reaches');
-  // getData().then((value) => print('done'));
-  // addData().then((value) => print('done'));
-  // //addUserData().then((value) => print('done'));
+  print('reaches');
+  getData().then((value) => print('done'));
+  addData().then((value) => print('done'));
+  //addUserData().then((value) => print('done'));
   // addPaymentPlans().then((value) => print('done'));
   // addPricing().then((value) => print('done'));
   // addUserData().then((value) => print('applicant done'));
 
-  // List maps = projects.map((e) => e.toMap()).toList();
-  // print({'Amiltus': maps});
+  List maps = projects.map((e) => e.toMap()).toList();
+  print({'Amiltus': maps});
 
   var res = projects[0].toMap();
   res.addAll({'pricing': priceBreakups.map((e) => e.toMap()).toList()});
@@ -179,5 +231,6 @@ void main() async {
       {'Standart Payment Plans': paymentPlans.map((e) => e.toMap()).toList()});
   res.addAll({'Sales': sales.map((e) => e.toMap()).toList()});
   Map js1 = {'Applicants': applicant.toMap(), 'Amiltus': res};
+
   print(jsonEncode(js1));
 }

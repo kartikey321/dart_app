@@ -1,6 +1,6 @@
-import 'package:dart_app/custom%20enums/unit_type.dart';
 import 'package:dart_app/models/applicants/applicant.dart';
 import 'package:dart_app/models/applicants/contact.dart';
+import 'package:dart_app/models/custom%20enums/unit_type.dart';
 import 'package:dart_app/models/projects/blocks/blocks.dart';
 import 'package:dart_app/models/projects/blocks/categories.dart';
 import 'package:dart_app/models/projects/blocks/plc.dart';
@@ -9,6 +9,10 @@ import 'package:dart_app/models/projects/blocks/pricing/price_breakup.dart';
 import 'package:dart_app/models/projects/blocks/pricing/pricing.dart';
 import 'package:dart_app/models/projects/approvals/approval.dart';
 import 'package:dart_app/models/projects/blocks/sales/authority.dart';
+import 'package:dart_app/models/projects/blocks/sales/demands/demand.dart';
+import 'package:dart_app/models/projects/blocks/sales/intrests/intrest.dart';
+import 'package:dart_app/models/projects/blocks/sales/invoices/invoice.dart';
+import 'package:dart_app/models/projects/blocks/sales/invoices/transaction_details.dart';
 import 'package:dart_app/models/projects/blocks/sales/nominee.dart';
 import 'package:dart_app/models/projects/blocks/sales/poc.dart';
 import 'package:dart_app/models/projects/blocks/sales/sale_history.dart';
@@ -123,6 +127,7 @@ List<Unit> units = [
 
 List<Blocks> blocks = [
   Blocks(
+      blockStage: BlockStage.COMPLETED,
       categories: [
         Category(
             unitArea: UnitArea(
@@ -141,6 +146,7 @@ List<Blocks> blocks = [
       plc: {"Road": true, "Swimming pool": true, "Parking": true},
       units: units),
   Blocks(
+      blockStage: BlockStage.ONGOING,
       categories: [
         Category(
             unitArea: UnitArea(
@@ -159,6 +165,7 @@ List<Blocks> blocks = [
       plc: {"Road": true, "Swimming pool": true, "Parking": true},
       units: units),
   Blocks(
+      blockStage: BlockStage.NOT_STARTED,
       categories: [
         Category(
             unitArea: UnitArea(
@@ -202,8 +209,12 @@ List<Sales> sales = [
         loanSanction: 3000000.00,
         sanctionBank: 'HDFC',
         owners: ['4558855556'],
-        soldBy: Authority(designation: 'Sales Representative', name: 'Rajiv'),
-        approvedBy: Authority(designation: 'UpperManager', name: 'Suresh'),
+        soldBy: Authority(
+            designation: 'Sales Representative',
+            name: 'Rajiv',
+            date: DateTime.now()),
+        approvedBy: Authority(
+            designation: 'UpperManager', name: 'Suresh', date: DateTime.now()),
         incentiveAllocated: '50000',
         pointOfContact: Poc(
             relationToApplicant: 'Brother of Ravi',
@@ -221,9 +232,14 @@ List<Sales> sales = [
         ],
         updateDetails: UpdateDetails(
             updatedOn: DateTime.now(),
-            approvedBy: Authority(designation: 'Manager', name: 'Ravi'),
-            updatedBy:
-                Authority(designation: 'Sales Representative', name: 'Rajesh'),
+            updatedBy: Authority(
+                designation: 'Sales Representative',
+                name: 'Rajiv',
+                date: DateTime.now()),
+            approvedBy: Authority(
+                designation: 'UpperManager',
+                name: 'Suresh',
+                date: DateTime.now()),
             reason: 'changes sanction bank'),
       )
     ],
@@ -247,8 +263,12 @@ List<Sales> sales = [
     loanSanction: 3000000.00,
     sanctionBank: 'HDFC',
     owners: ['4558855556'],
-    soldBy: Authority(designation: 'Sales Representative', name: 'Rajiv'),
-    approvedBy: Authority(designation: 'UpperManager', name: 'Suresh'),
+    soldBy: Authority(
+        designation: 'Sales Representative',
+        name: 'Rajiv',
+        date: DateTime.now()),
+    approvedBy: Authority(
+        designation: 'UpperManager', name: 'Suresh', date: DateTime.now()),
     incentiveAllocated: '50000',
     pointOfContact: Poc(
         relationToApplicant: 'Brother of Ravi',
@@ -401,3 +421,54 @@ PriceBreakup priceBreakup1 = PriceBreakup(
     ]);
 
 List<PriceBreakup> priceBreakups = [priceBreakup1];
+
+List<Demand> demands = [
+  Demand(
+    createdOn: DateTime.now(),
+    paymentStage: 'Within 30 days of Booking',
+    amount: 6464646.32,
+    demandType: DemandType.INSTALLMENT,
+    dueTill: DateTime.parse("2024-05-27"),
+  ),
+];
+
+List<Intrest> interests = [
+  Intrest(
+      previous: 50.23,
+      overdueAmount: 50000.32,
+      startDate: DateTime.parse('2023-11-12'),
+      intrestPercentage: 8.8)
+];
+
+List<Invoice> invoices = [
+  Invoice(
+      createdBy: Authority(
+          date: DateTime.parse('2023-12-25'),
+          designation: 'Manager',
+          name: 'Kartikey'),
+      approvedBy: Authority(
+          date: DateTime.parse('2023-12-25'),
+          designation: 'Manager',
+          name: 'Kartikey'),
+      date: DateTime.parse('2023-12-25'),
+      amount: 565.455,
+      transaction_completed: true,
+      transaction_status: TransactionStatus.APPROVED,
+      transaction_type: TransactionType.INSTALLMENT,
+      recieptNo: 'ADR1432',
+      sourceOfFund: SourceFundType.SELF_FUNDED,
+      modeOfPayment: ModeOfPayment.IN_APP_PAYMENT,
+      gstRate: '5.5',
+      notes: [],
+      documents: [
+        ApprovalFile(
+            name: 'Screenshot',
+            no: '4566464',
+            otherDetails: {},
+            docLink: 'https://google.com')
+      ],
+      transactionDetails: TransactionDetails(
+          clearanceDate: DateTime.now(),
+          bankName: 'HDFC',
+          transactionNo: 'kckekc'))
+];

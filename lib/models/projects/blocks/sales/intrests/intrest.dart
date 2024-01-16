@@ -5,8 +5,8 @@ class Intrest {
   double previous;
   double overdueAmount;
   DateTime startDate;
-  DateTime? endTime//;
-  String intrestPercentage;
+  DateTime? endTime;
+  double intrestPercentage;
   double? intrest;
   Intrest({
     required this.previous,
@@ -22,7 +22,7 @@ class Intrest {
     double? overdueAmount,
     DateTime? startDate,
     DateTime? endTime,
-    String? intrestPercentage,
+    double? intrestPercentage,
     double? intrest,
   }) {
     return Intrest(
@@ -39,8 +39,8 @@ class Intrest {
     return <String, dynamic>{
       'previous': previous,
       'overdueAmount': overdueAmount,
-      'startDate': startDate.toIso8601String(),
-      'endTime': endTime?.toIso8601String(),
+      'startDate': startDate.millisecondsSinceEpoch,
+      'endTime': endTime?.millisecondsSinceEpoch,
       'intrestPercentage': intrestPercentage,
       'intrest': intrest,
     };
@@ -50,11 +50,11 @@ class Intrest {
     return Intrest(
       previous: map['previous'] as double,
       overdueAmount: map['overdueAmount'] as double,
-      startDate: DateTime.parse(map['startDate'] as String),
+      startDate: DateTime.fromMillisecondsSinceEpoch(map['startDate'] as int),
       endTime: map['endTime'] != null
-          ? DateTime.parse(map['endTime'] as String)
+          ? DateTime.fromMillisecondsSinceEpoch(map['endTime'] as int)
           : null,
-      intrestPercentage: map['intrestPercentage'] as String,
+      intrestPercentage: map['intrestPercentage'] as double,
       intrest: map['intrest'] != null ? map['intrest'] as double : null,
     );
   }

@@ -48,7 +48,7 @@ class Unit {
       'unitDimension': unitDimension.toMap(),
       'unitDirection': unitDirection.toMap(),
       'roadSize': roadSize.toMap(),
-      'plcRoad': plc,
+      'plc': plc,
       'notes': notes,
       'parkings': parkings,
       'floorNo': floorNo,

@@ -784,3 +784,734 @@ var kartikey = {
     }
   }
 };
+var data_1 = {
+  "Applicants": {
+    "prefixType": "Mr.",
+    "name": "Ramesh",
+    "relativeType": "Son of",
+    "relativeName": "Rajeev",
+    "dateOfBirth": "2002-07-22T00:00:00.000",
+    "aadharNo": "45684565522",
+    "panNo": "ASJK54544",
+    "residentialAddress": "Rampur",
+    "profession": "Income Tax Officer",
+    "officeName": "RV",
+    "officeAddress": "Rampur",
+    "contact": {
+      "telephoneNo": "0581966696",
+      "officeNo": "8744445454",
+      "mobile": "4558855556"
+    },
+    "preferredCorrespondenceAddress": "RESIDENCE",
+    "documents": [
+      {
+        "name": "Adhaar",
+        "no": "45684565522",
+        "otherDetails": {},
+        "docLink": "https://google.com"
+      },
+      {
+        "name": "Pan Card",
+        "no": "ASJK54544",
+        "otherDetails": {},
+        "docLink": "https://google.com"
+      }
+    ]
+  },
+  "Amiltus": {
+    "name": "Rudraksh",
+    "location": {"latitude": 23.634501, "longitude": 23.634501},
+    "address": "Bareilly",
+    "blocks": [
+      {
+        "name": "A",
+        "created": "2024-01-02T11:38:52.157233",
+        "types": [],
+        "stages": [],
+        "tags": ["2BHK", "3BHK"],
+        "categories": [
+          {
+            "unitCategory": "Type_II",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            }
+          },
+          {
+            "unitCategory": "Type_II",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            }
+          },
+        ],
+        "plc": {"Road": true, "Swimming pool": true, "Parking": false},
+        "units": [
+          {
+            "unitNo": "25A",
+            "unitType": "Flat",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 40.0, "corner": 50.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25B",
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 45.0, "corner": 55.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25C",
+            "unitType": "Flat",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 40.0, "corner": 50.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25D",
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 45.0, "corner": 55.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "created": "2024-01-02T11:38:52.157748",
+        "types": [],
+        "stages": [],
+        "tags": ["2BHK", "3BHK"],
+        "categories": [
+          {
+            "unitCategory": "Type_II",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            }
+          }
+        ],
+        "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+        "units": [
+          {
+            "unitNo": "25A",
+            "unitType": "Flat",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 40.0, "corner": 50.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25B",
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 45.0, "corner": 55.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25C",
+            "unitType": "Flat",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 40.0, "corner": 50.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25D",
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 45.0, "corner": 55.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          }
+        ]
+      },
+      {
+        "name": "C",
+        "created": "2024-01-02T11:38:52.157751",
+        "types": [],
+        "stages": [],
+        "tags": ["2BHK", "3BHK"],
+        "categories": [
+          {
+            "unitCategory": "Type_II",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            }
+          }
+        ],
+        "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+        "units": [
+          {
+            "unitNo": "25A",
+            "unitType": "Flat",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 40.0, "corner": 50.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25B",
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 45.0, "corner": 55.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25C",
+            "unitType": "Flat",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house4",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 40.0, "corner": 50.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          },
+          {
+            "unitNo": "25D",
+            "unitType": "VILLA",
+            "unitArea": {
+              "plotArea": 46464.0,
+              "constructedArea": 446.0,
+              "covered": 5456.0,
+              "superArea": 255455.0,
+              "carpetArea": 54554.0
+            },
+            "unitCategory": "Type_II",
+            "unitDimension": {
+              "front": 170.0,
+              "back": 170.0,
+              "left": 120.0,
+              "right": 120.0
+            },
+            "unitDirection": {
+              "east": "house5",
+              "west": "road",
+              "north": "road",
+              "south": "park"
+            },
+            "roadSize": {"front": 45.0, "corner": 55.0},
+            "plc": {"Road": true, "Swimming pool": true, "Parking": true},
+            "notes": [],
+            "parkings": [],
+            "floorNo": 2,
+            "unitAvailability": "AVAILABLE"
+          }
+        ]
+      }
+    ],
+    "approvalFiles": [
+      {
+        "name": "File1",
+        "no": "155455122",
+        "otherDetails": {"RERA NO": 2424443},
+        "docLink": "https://www.google.com/"
+      }
+    ],
+    "pricing": [
+      {
+        "unitCategory": "Type_II",
+        "updatedOn": "2024-01-02T11:38:52.161220",
+        "basic_payment_BSP": {
+          "name": "Basic Payment",
+          "value": 6400000.0,
+          "priceValueType": "LUMP_SUM"
+        },
+        "plc": [
+          {"name": "Road", "value": 20000.0, "priceValueType": "PER_AREA"},
+          {
+            "name": "Swimming Pool",
+            "value": 30000.0,
+            "priceValueType": "LUMP_SUM"
+          }
+        ],
+        "additional": [
+          {"name": "IDC", "value": 30000.0, "priceValueType": "LUMP_SUM"}
+        ],
+        "parking": null,
+        "addons": [
+          {
+            "name": "Wooden work",
+            "value": 30000.0,
+            "priceValueType": "LUMP_SUM"
+          }
+        ]
+      }
+    ],
+    "Standart Payment Plans": [
+      {
+        "name": "Construction Linked Payment Plan",
+        "paymentPlans": [
+          {
+            "name": "Upon Booking",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": null
+          },
+          {
+            "name": "Within 30 days of Booking",
+            "paymentStageType": "TIME_BOUND",
+            "completedPercentage": null,
+            "linkedStage": null
+          },
+          {
+            "name": "At the Beginning of Construction",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "1"
+          },
+          {
+            "name": "Ground Floor Roof Casting",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "1"
+          },
+          {
+            "name": "1st Floor Roof Casting",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "2"
+          },
+          {
+            "name": "At the time of offer of Possession",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "3"
+          }
+        ]
+      },
+      {
+        "name": "Down Payment Plan",
+        "paymentPlans": [
+          {
+            "name": "Upon Booking",
+            "paymentStageType": "TIME_BOUND",
+            "completedPercentage": null,
+            "linkedStage": null
+          },
+          {
+            "name": "Within 30 days of Booking",
+            "paymentStageType": "TIME_BOUND",
+            "completedPercentage": null,
+            "linkedStage": null
+          },
+          {
+            "name": "At the time of offer of Possession",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "3"
+          }
+        ]
+      },
+      {
+        "name": "Flexi Payment Plan",
+        "paymentPlans": [
+          {
+            "name": "Upon Booking",
+            "paymentStageType": "TIME_BOUND",
+            "completedPercentage": null,
+            "linkedStage": null
+          },
+          {
+            "name": "Within 30 days of Booking",
+            "paymentStageType": "TIME_BOUND",
+            "completedPercentage": null,
+            "linkedStage": null
+          },
+          {
+            "name": "At the Beginning of Construction",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "1"
+          },
+          {
+            "name": "At the time of offer of Possession",
+            "paymentStageType": "STAGE_BOUND",
+            "completedPercentage": null,
+            "linkedStage": "3"
+          }
+        ]
+      }
+    ],
+    "Sales": [
+      {
+        "unitNo": "25A",
+        "blockName": "A",
+        "soldOn": "2024-01-02T11:38:52.164264",
+        "costing": 3500000.78,
+        "gst": "AS_APPLICABLE",
+        "agreementVal": {
+          "name": "agreement1",
+          "no": "54646464",
+          "otherDetails": {},
+          "docLink": "https://google.com"
+        },
+        "supplementaryAgreements": [
+          {
+            "name": "supplementary agreement1",
+            "no": "54646464",
+            "otherDetails": {},
+            "docLink": "https://google.com"
+          }
+        ],
+        "loanSanction": 3000000.0,
+        "sanctionBank": "HDFC",
+        "owners": ["4558855556"],
+        "soldBy": {
+          "date": 1704175732164,
+          "designation": "Sales Representative",
+          "name": "Rajiv"
+        },
+        "approvedBy": {
+          "date": 1704175732164,
+          "designation": "UpperManager",
+          "name": "Suresh"
+        },
+        "incentiveAllocated": "50000",
+        "pointOfContact": {
+          "name": "Veer",
+          "relationToApplicant": "Brother of Ravi",
+          "primaryEmail": "veer@gmail.com",
+          "secondaryEmail": "veer123@gmail.com",
+          "phoneNo": 5464664
+        },
+        "notes": [],
+        "status": "LIVE",
+        "nominees": [
+          {
+            "name": "bbbbb",
+            "applicantId": "54464646",
+            "relation_with_applicant": "Brother"
+          }
+        ],
+        "history": [
+          {
+            "unitNo": "25A",
+            "blockName": "A",
+            "soldOn": "2024-01-02T11:38:52.164047",
+            "costing": 3500000.78,
+            "gst": "AS_APPLICABLE",
+            "agreementVal": {
+              "name": "agreement1",
+              "no": "54646464",
+              "otherDetails": {},
+              "docLink": "https://google.com"
+            },
+            "supplementaryAgreements": [
+              {
+                "name": "supplementary agreement1",
+                "no": "54646464",
+                "otherDetails": {},
+                "docLink": "https://google.com"
+              }
+            ],
+            "loanSanction": 3000000.0,
+            "sanctionBank": "HDFC",
+            "owners": ["4558855556"],
+            "soldBy": {
+              "date": 1704175732164,
+              "designation": "Sales Representative",
+              "name": "Rajiv"
+            },
+            "approvedBy": {
+              "date": 1704175732164,
+              "designation": "UpperManager",
+              "name": "Suresh"
+            },
+            "incentiveAllocated": "50000",
+            "pointOfContact": {
+              "name": "Veer",
+              "relationToApplicant": "Brother of Ravi",
+              "primaryEmail": "veer@gmail.com",
+              "secondaryEmail": "veer123@gmail.com",
+              "phoneNo": 5464664
+            },
+            "notes": [],
+            "status": "LIVE",
+            "nominees": [
+              {
+                "name": "bbbbb",
+                "applicantId": "54464646",
+                "relation_with_applicant": "Brother"
+              }
+            ],
+            "updateDetails": {
+              "reason": "changes sanction bank",
+              "updatedBy": {
+                "date": 1704175732164,
+                "designation": "Sales Representative",
+                "name": "Rajiv"
+              },
+              "approvedBy": {
+                "date": 1704175732164,
+                "designation": "UpperManager",
+                "name": "Suresh"
+              },
+              "updatedOn": "2024-01-02T11:38:52.164141"
+            }
+          }
+        ]
+      }
+    ]
+  }
+};

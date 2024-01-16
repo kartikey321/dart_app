@@ -7,7 +7,7 @@ import 'package:dart_app/models/projects/approvals/approval.dart';
 
 class FloorProgress {
   DateTime startDate;
-  Duration targetDays; //90
+  Duration targetDays; 
   DateTime targeDate;
   String floorNo;
   FloorProgress({
